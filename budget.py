@@ -44,7 +44,7 @@ def signup():
         conn.commit()
         print("✅ Signup successful. You can now log in.\n")
     except sqlite3.IntegrityError:
-        print("❌ Username already exists.\n")
+        print("❌Username already exists.\n")
 
 def login():
     username = input("Username: ").strip()
@@ -56,7 +56,7 @@ def login():
         print(f"✅ Welcome, {username}!\n")
         return result[0]
     else:
-        print("❌ Invalid login.\n")
+        print("❌Invalid login.\n")
         return None
 
 # --- Budget Functions ---
